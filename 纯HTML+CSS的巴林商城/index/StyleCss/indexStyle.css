@@ -1,0 +1,450 @@
+/* 顶部导航栏 */
+.topMenu {
+    width: 100%;
+    height: 30px;
+    background-color: rgb(236, 236, 236);
+    font-size: 12px;
+}
+
+.topMenu div{
+    margin: 0 auto;
+}
+/* 顶部导航栏左边 */
+.topMenu div span{
+    float: left;
+    line-height: 30px;
+}
+/* 顶部导航栏右边 */
+.topMenu div ul{
+    float: right;
+}
+
+.topMenu div ul li{
+    height: 20px;
+    display: inline-block;
+    padding: 0px 10px;
+    margin-top: 5px;
+    line-height: 20px;
+}
+
+.topMenu div ul li a{
+    color: black;
+}
+
+
+/* all in 搜索框 */
+.searchBar{
+    height: 130px;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+/* logo */
+.searchBar img {
+    float: left;
+    width: 200px;
+    height: 50px;
+    padding-right: 50px;
+}
+
+/* 搜索框 */
+.searchBar>div{
+    float: left;
+    height: 90px;
+}
+.searchBar>div .search{
+    float: left;
+    line-height: 44px;
+    border: 3px solid rgb(137, 35, 35);
+    /* 修改a标签的背景颜色，周围一直会有一圈白线。反其道行之给搜索框加背景颜色。 */
+    background-color: rgb(141, 73, 73);
+    border-radius: 4px;
+}
+/* input输入 */
+.searchBar>div .search input{
+    padding: 0 10px;
+    width: 500px;
+    height: 44px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+}
+/* 搜索图标设置 */
+.searchBar>div .search a{
+    float: right;
+    line-height: 44px; 
+    color: white;
+    padding: 0 15px;
+}
+.searchBar>div .search a::before{
+    content: '';
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    background: url('../img/search.png') no-repeat 0px 3px;
+    background-size: 65%;
+    vertical-align: middle;
+    margin:0 15px;
+}
+
+/* 搜索框的下部分热门关键字 */
+.searchBar>div div:last-child{
+    color:rgb(101, 101, 101);
+    margin-top: 60px;
+}
+.searchBar>div div ul{
+    display: inline;
+}
+.searchBar>div div ul li{
+    display: inline;
+    line-height: 10px; 
+    padding:0 10px;
+}
+.searchBar>div div ul li a{
+    color:rgb(101, 101, 101);
+}
+
+/* 购物车 */
+.searchBar>a{
+    float: left;
+    width: 170px;
+    margin-left: 100px;
+    background-color: white;
+    line-height: 50px;
+    color: black;
+    text-align: center;
+    border: 2px solid rgb(206, 206, 206);
+    border-radius: 4px;
+}
+.searchBar>a::before{
+    content: '';
+    display: inline-block;
+    width: 50px;
+    height: 30px;
+    background: url(../img/icon.png) no-repeat 0px 0px;
+    vertical-align: middle;
+}
+
+
+/* 导航栏 */
+.nav{
+    height: 50px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.nav>ul>li{
+    float: left;
+    width: 150px;
+    background-color: rgb(93, 93, 93);
+    color: white;
+    line-height: 50px;
+    /* font-size: 18px; */
+}
+
+.nav>ul>li:first-child{
+    width: 300px;
+    background-color: rgb(191, 91, 91);
+    font-size: 20px;
+    position: relative;
+}
+
+/* 全部分类 */
+.nav ul li .clothesClass{
+    position: absolute;
+    left: 0;
+    /* height: 140px; */
+    width: 250px;
+    padding: 0 25px;
+    background-color: rgb(191, 91, 91,0.8);
+    text-align: left;
+    z-index: 1;
+}
+.nav ul li .clothesClass>div{
+    padding-top: 15px;
+}
+.nav ul li .clothesClass div a{
+    float: left;
+    padding: 0 10px 10px 0;
+    color: white;
+    font-size: 12px;
+    line-height: 14px;
+}
+.nav ul li .clothesClass div a:last-child{
+    margin-bottom: 20px;
+}
+
+
+/* 广告 */
+.banner{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+.banner img{
+    position: absolute;
+    left: 50%;
+    margin-left: -960px;
+}
+
+/* 广告box */
+.bannerBox div{
+    float: left;
+    width: 299px;
+    height: 143px;
+    border: 1px solid grey;
+    border-left: none;
+    overflow: hidden;
+}
+.bannerBox div:first-child{
+    width: 299px;
+    height: 145px;
+    border: none;
+    border-right: 1px solid grey;
+}
+
+
+/* 热销排行榜 */
+.hotTop{
+    height: 350px;
+}
+.hotTopimg{
+    margin: 37px auto;
+}
+
+.hotTop div{
+    float: left;
+    width: 298px;
+    height: 298px;
+    text-align: center;
+    border: 1px solid grey;
+    border-left: none;
+    overflow: hidden;
+}
+.hotTop div:first-child{
+    width: 298px;
+    border-left: 1px solid grey;
+}
+.hotTop div h3{
+    font-weight: normal;
+    font-size: 20px;
+    padding: 10px 0;
+}
+.hotTop div span{
+    color: gray;
+    font-size: 12px;
+}
+.hotTop>a{
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    color: black;
+}
+
+
+/* 新货上架 */
+.newClothes>img{
+    display: block;
+    margin-bottom: 20px;
+}
+.newClothes .left{
+    width: 556px;
+    height: 640px;
+    font-size: 0;
+    overflow: hidden;
+}
+.newClothes .middle{
+    width: 300px;
+    height: 640px;
+    font-size: 0;
+    overflow: hidden;
+}
+.newClothes .right{
+    width: 344px;
+    height: 640px;
+    font-size: 0;
+    overflow: hidden;
+}
+
+
+/* 热门商品 */
+.hotClothes{
+    font-size: 0;
+}
+.hotClothes>img{
+    display: block;
+    padding: 60px 0px 20px 0px;
+}
+.hotClothes div{
+    overflow: hidden;
+}
+.hotClothes div:nth-child(2){
+    width: 600px;
+    height: 300px;
+}
+.hotClothes .hotClothesCard{
+    width: 298px;
+    height: 298px;
+    border: 1px solid grey;
+}
+.hotClothes>a{
+    display: block;
+    font-size: 14px;
+    height: 50px;
+    line-height: 50px;
+    color: black;
+}
+
+
+/*店长推荐*/
+.bossHots span:first-child{
+    width: 100px;
+    height: 25px;
+    text-indent: -9999px;
+    background: url(../img/title.png) no-repeat;
+    margin-bottom: 40px;
+    margin-top: 60px;
+}
+.bossHots .clothesShow{
+    clear: left;
+}
+.clothesShow .showLeft{
+    width: 199px;
+    height: 500px;
+    border-right: 1px solid grey;
+}
+.clothesShow .showTop{
+    width: 1000px;
+}
+.clothesShow .showTop a:first-child{
+    width: 500px;
+    height: 250px;
+}
+.bossHots>a:last-child{
+    color: black;
+    display: block; 
+    height: 50px;
+    line-height: 50px; 
+}
+.clothesCard{
+    float: left;
+    width: 249px;
+    height: 248px;
+    border: 1px solid grey;
+    border-left: none;
+    color: black;
+    overflow: hidden;
+}
+.clothesCard>div{
+    padding: 0px 15px;
+    border-top: 1px solid grey;
+}
+.clothesCard>div>span:last-child{
+    color: red;
+}
+
+
+/* 爆款推荐 */
+.boomClothes>img{
+    padding:60px 0px 20px 0px;
+    display: block;
+}
+.boomClothes div{
+    width: 240px;
+    height: 250px;
+    overflow: hidden;
+}
+.boomClothes div:nth-child(2),
+.boomClothes div:nth-child(3)
+{
+    width: 350px;
+    height: 250px;
+    overflow: hidden;
+}
+.boomClothes div:nth-child(4),
+.boomClothes div:nth-child(5){
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+}
+.boomClothes>a{
+    display: block;
+    font-size: 14px;
+    height: 50px;
+    line-height: 50px;
+    color: black;
+}
+
+ /* 商城承诺  */
+.promise ul{
+    height: 200px;
+    margin-top: 20px;
+    background-color: rgb(245, 245, 245);
+    text-align: center;
+}
+.promise ul li{
+    width: 300px;
+    height: 200px;
+    float: left;
+    overflow: hidden;
+    padding-top: 70px;
+}
+.promise ul li img{
+    vertical-align: top;
+}
+.promise ul li div{
+    display: inline-block;
+    text-align: left;
+}
+.promise ul li div h3{
+    font-size: 24px;
+}
+.promise ul li div span{
+    font-size: 14px;
+}
+
+/* 帮助 */
+.help ul{
+    text-align: center;
+    height: 150px;
+    color: rgb(87, 87, 87);
+}
+.help ul li{
+    float: left;
+    width: 240px;
+    height: 150px;
+}
+.help ul li h3{
+    font-weight: normal;
+    font-size: 18px; 
+}
+.help ul li a{
+    font-size: 14px;
+    color: rgb(87, 87, 87);
+}
+
+
+/* 加入我们 */
+.joinus{
+    border-top: 2px solid rgb(197,197,197);
+}
+
+.joinus ul{
+    text-align: center;
+}
+.joinus ul li{
+    display: inline-block;
+    padding: 20px 10px;
+}
+.joinus ul li a{
+    color: rgb(87, 87, 87);
+}
+
+/* 结尾 */
+.abaaba{
+    text-align: center;
+    margin: 20px auto;
+    font-size: 12px;
+    color: rgb(87, 87, 87);
+}

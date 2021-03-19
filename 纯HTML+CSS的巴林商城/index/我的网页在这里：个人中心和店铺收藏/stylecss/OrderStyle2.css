@@ -1,0 +1,161 @@
+/* 右边的navbar */
+.myCenter .right .collectBox {
+    border: none;
+}
+.myCenter .right .collectBox>div:first-child{
+    height: 27px;
+    border-bottom: 2px solid rgb(250, 250, 250);
+}
+.myCenter .right .collectBox .orederNav ul li{
+    margin: 0px;
+    padding: 0px 20px 5px 20px;
+    display: inline-block;
+    font-size: 15px;
+}
+.myCenter .right .collectBox .orederNav ul li:first-child{
+    color: rgb(220, 33, 76);
+    border-bottom: 2px solid rgb(220, 33, 76);
+}
+/* 右边的navbar的右边的订单回收 */
+.myCenter .right .collectBox .orederNav div{
+    color: rgb(153,153,153);
+    font-size: 12px;
+    height: 27px;
+    line-height: 27px;
+}
+.myCenter .right .collectBox .orederNav div::before{
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 18px;
+    background-image: url(../img/购物车06.jpg);
+    position: relative;
+    top:5px;
+    margin-right: 5px;
+}
+/* 右边的搜索框 */
+.myCenter .right .collectBox .orderSearch{
+    display: inline-block;
+    width: 330px;
+    height: 25px;
+    border: 2px solid rgb(204, 204, 204);
+    background-color: rgb(245, 245, 245);
+    margin-top: 10px;
+}
+.myCenter .right .collectBox .orderSearch input{
+    line-height: 25px;
+    width: 250px;
+    border: none;
+    outline: none;
+    font-size: 12px;
+    padding-left: 10px;
+    border-right: 2px solid rgb(204, 204, 204);
+}
+.myCenter .right .collectBox .orderSearch>a{
+    display: inline-block;
+    margin: 0px;    
+    padding-left: 5px;
+    line-height: 25px;
+    font-size: 12px;
+    color: black;
+}
+.myCenter .right .collectBox>a{
+    content: "更多搜索条件";
+    display: inline-block;
+    color: black;
+    padding-left: 10px;
+}
+
+/* 右边的订单详情 */
+.box1{
+    width: 330px;
+}
+.box2{
+    width: 100px;
+    text-align: center;  
+}
+.box3{
+    width: 50px;
+    text-align: center;
+}
+.box4{
+    width: 100px;
+    text-align: center;
+}
+.box5{
+    width: 100px;
+    text-align: center;
+}
+.box6{
+    width: 100px;
+    text-align: center;
+}
+.box7{
+    width: 100px;
+    text-align: center;
+}
+.orderCaption{
+    margin-top: 15px;
+    background-color:rgb(250, 250, 250);
+    height: 50px;
+    line-height: 50px;
+    border-radius:1px solid rgb(220,220,220);
+    box-shadow: 0px 0px 1px black;
+}
+.orderCaption div{
+    float: left;
+    text-align: center;
+}
+
+/* 订单卡片 */
+.orderCard{
+    box-shadow: 0 0 1px black;
+}
+.orderCard>div:first-child{
+    margin-top: 20px;
+    background-color:rgb(250, 250, 250);
+    height: 40px;
+    line-height: 40px;
+    padding: 0px 10px;
+    font-size: 12px;
+}
+.orderCard>div:first-child span:last-child{
+    margin-left: 20px;
+}
+.orderCard>div:first-child img{
+    margin: 10px 35px 0px 0px;
+}
+
+
+.orderCard>div:last-child>div{
+    float: left;    
+    font-size: 12px;
+    padding: 10px 0px;
+    line-height: 20px;
+}
+
+/* 商品的简介 */
+.orderCard>div:last-child .box1 div{
+    float: left;
+}
+.orderCard>div:last-child .box1>div:nth-child(1){
+    margin:0px 20px;
+}
+.orderCard>div:last-child .box1>div:nth-child(3){
+    margin-top: 20px;
+}
+/* border */
+.orderCard>div:last-child .box4,
+.orderCard>div:last-child .box5,
+.orderCard>div:last-child .box6
+{
+    height: 80px;
+    border-right: 1px solid rgb(200,200,200);
+}
+
+/* 翻页栏 */
+.paging a{
+    display: inline-block;
+    color: black;
+    padding: 2px;
+}

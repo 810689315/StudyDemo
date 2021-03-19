@@ -1,0 +1,253 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.cart {
+    width: 300px;
+    border-left: 6px solid #f00;
+    position: fixed;
+    right: -300px;
+    height: 100%;
+    z-index: 99;
+}
+
+.cart button {
+    border: none;
+    color: white;
+    background-color: #F00;
+    line-height: 36px;
+    outline: none;
+    text-align: left;
+}
+
+.cart>button {
+    position: absolute;
+    width: 80px;
+    left: -80px;
+    top: 50%;
+    border: none;
+    margin-top: -20px;
+}
+
+.cart .bottom {
+    line-height: 50px;
+}
+
+.cart .bottom>button {
+    width: 70px;
+    text-align: center;
+    line-height: 40px;
+    float: right;
+    margin: 5px 10px 0px 0px;
+}
+
+.cart>button span {
+    position: absolute;
+    color: white;
+    border-radius: 12px;
+    min-width: 24px;
+    text-align: center;
+    background-color: tomato;
+    line-height: 24px;
+    left: 8px;
+    top: -12px;
+}
+
+.cart>button::before {
+    content: '';
+    display: block;
+    float: left;
+    width: 28px;
+    height: 36px;
+    background: url(https://static.360buyimg.com/devfe/toolbar/1.0.0/css/i/toolbars.png) #F00 no-repeat -50px 0px;
+}
+
+.cart h6 {
+    line-height: 50px;
+    background-color: chocolate;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.cart h6::before {
+    content: '';
+    display: block;
+    float: left;
+    width: 28px;
+    height: 28px;
+    margin: 7px 0px 0px 0px;
+    background: url(https://static.360buyimg.com/devfe/toolbar/1.0.0/css/i/toolbars.png) chocolate no-repeat -50px 0px;
+}
+
+.cart h6::after {
+    content: '清空';
+    display: block;
+    float: right;
+    width: 28px;
+    height: 28px;
+    margin: 0px 20px 0px 0px;
+    cursor: pointer;
+}
+
+
+.cart .bottom {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 50px;
+    background-color: chocolate;
+    color: #FFF;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    overflow: hidden;
+}
+
+.prolist {
+    width: 820px;
+    margin: 0 auto;
+}
+
+.prolist li {
+    float: left;
+    border: 1px solid #f00;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding: 5px;
+    width: 142px;
+    position: relative;
+}
+
+.prolist li a,
+.prolist li span {
+    display: block;
+    color: black;
+    font-size: 14px;
+}
+
+.prolist li a img {
+    width: 130px;
+    height: 130px;
+}
+
+.prolist li a.img {
+    height: 140px;
+}
+
+.prolist li a.title {
+    margin-top: 10px;
+    line-height: 30px;
+}
+
+.prolist li span {
+    font-weight: bold;
+    color: red;
+}
+
+.prolist li:hover img {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    left: 0px;
+    z-index: 9;
+}
+
+.prolist li a.addcart {
+    text-align: center;
+    width: 100px;
+    margin: 0 auto;
+    line-height: 30px;
+    background-color: tomato;
+    color: #fff;
+}
+
+.cartlist .fl {
+    float: left;
+}
+
+.cartlist .fr {
+    float: right;
+}
+
+.cartlist {
+    width: 100%;
+    padding: 15px;
+}
+
+.cartlist li {
+    width: 100%;
+    height: 60px;
+    /* 清除浮动 */
+    overflow: hidden;
+}
+
+.cartlist .left {
+    width: 60px;
+}
+
+.cartlist .left img {
+    width: 100%;
+    height: 100%;
+}
+
+.cartlist .left {
+    margin-right: 10px;
+}
+
+.cartlist .middle p {
+    color: red;
+    margin-left: 10px;
+}
+
+.cartlist .right {
+    padding: 0px 25px 10px 0px;
+}
+
+.cartlist .right span {
+    display: inline-block;
+    width: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.cartlist .right button {
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 20px;
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    border: 1px solid #ddd;
+
+    cursor: pointer;
+}
+
+.cartlist .right div {
+    color: red;
+    text-align: center;
+    cursor: pointer;
+}
+
+.flydiv {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    z-index: 99;
+    border-radius: 25px;
+    overflow: hidden;
+    display: none;
+}

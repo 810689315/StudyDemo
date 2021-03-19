@@ -1,0 +1,347 @@
+.topNav{
+    background-color: rgb(197,117,116);
+}
+.topNav .center{
+    height: 70px;
+}
+
+.topNav .logo{
+    height: 70px;
+    overflow: hidden;
+}
+.topNav ul{
+    display: inline-block;
+}
+.topNav ul li{
+    float: left;
+    /* display: inline-block    ; */
+    line-height: 70px;
+    height: 70px;
+    padding: 0px 40px;
+}
+.topNav ul li a{
+    color: white;
+    font-size: 20px;
+}
+.topNav ul li:first-child{
+    background-color: white;
+}
+.topNav ul li:first-child a{
+    color: rgb(197,117,116);
+}
+.topNav div div:last-child{
+    float: right;
+    height: 30px;
+    background-color: rgb(141,71,71);
+    border: 3px solid rgb(141,71,71);
+    margin: 20px 2px;
+    border-radius: 4px;
+}
+.topNav div div .search{
+    width: 200px;
+    height: 30px;
+    border: none;
+    outline: none;
+}
+.topNav div div label{
+    height: 70px;
+    font-size: 14px;
+    color: white;
+    padding: 0px 10px;
+}
+.topNav div div label::before{
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: url(../img/search.png) no-repeat 0px 0px;
+    background-size: 18px 18px;
+    vertical-align: middle;
+    padding-left: 10px;
+}
+
+
+/* 个人中心 left */
+.myCenter{
+    margin-top: 15px;
+}
+.myCenter .left{
+    width: 290px;
+    height: 1070px;
+    background-color: rgb(248, 248, 248);
+    border: 2px solid rgb(208, 208, 208);
+    text-align: left;
+    margin-right: 20px;
+}
+.myCenter .left div
+{
+    padding-left: 55px;
+    font-size: 24px;
+    height: 98px;
+    border-bottom: 2px solid rgb(247, 47, 47);
+    line-height: 98px;
+}
+.myCenter ul li{
+    margin-top: 40px;
+    padding-left: 55px;
+    font-size: 18px;
+}
+.myCenter a{
+    display: block;
+    font-size: 14px;
+    color: rgb(120, 120, 120);
+    margin-top: 15px;
+}
+
+/* 个人中心 right */
+/* 第一行左边第一个盒子 */
+.myCenter .right{
+    min-width: 880px;
+    height: 1070px;
+}
+.myCenter .right .right_1{
+    height: 248px;
+    border: 1px solid rgb(212, 212, 212);
+    border-right: none;
+}
+.myCenter .right .right_1>div{
+    width: 290px;
+    height: 248px;
+    border-right: 1px solid rgb(212, 212, 212);
+}
+.myCenter .right .right_1>div:first-child{
+    background-color: rgb(255, 106, 103);
+    text-align: center;
+}
+.myCenter .right .right_1>div:first-child img:first-child{
+    margin-top: 15px;
+    width: 100px;
+    height: 100px;
+    background-color: chartreuse;
+    border-radius: 50%;
+}
+.myCenter .right .right_1>div:first-child p{
+    margin: 5px 0px;
+}
+.myCenter .right .right_1>div:first-child img:nth-of-type(2){
+    width: 88px;
+    height: 23px;
+    background-color: skyblue;
+    margin-bottom: 5px;
+}
+.myCenter .right .right_1>div:first-child span:nth-of-type(1){
+    text-align: left;
+    display: block; 
+    color: white;
+    margin: 0px 25px 5px 25px;
+    padding: 7px 0px 0px 25px;
+    border-top: 1px solid rgb(227, 95, 93);
+}
+/* .myCenter .right .right_1>div:first-child progress::-webkit-progress-bar{
+    background-color: rgb(205, 69, 66);
+} */
+.myCenter .right .right_1>div:first-child span:nth-of-type(2){
+    display: block; 
+    color: white;
+}
+
+/* 第一行左边第二个盒子 */
+.myCenter .right .right_1>div:nth-child(2) div{
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    color: black;
+}
+.myCenter .right .right_1>div:nth-child(2) div::before{
+    content: '';
+    display: inline-block;
+    width: 5px;
+    height: 18px;
+    background-color: rgb(249, 103, 59);
+    margin-left: 10px;
+    margin-right: 20px;
+    vertical-align: middle;
+}
+.myCenter .right .right_1>div:nth-child(2) table{
+    margin: 10px 40px 30px 50px;
+}
+.myCenter .right .right_1>div:nth-child(2) table tr td{
+    font-size: 13px;
+    color: rgb(143, 143, 143);
+}
+.myCenter .right .right_1>div:nth-child(2) table tr td:nth-child(2){
+    text-align: center;
+    color: rgb(246, 65, 62);
+}
+
+
+/* 第一行左边第三个盒子 */
+.myCenter .right .right_1>div:nth-child(3)>div:first-child{
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    color: black;
+}
+.myCenter .right .right_1>div:nth-child(3)>div:first-child::before{
+    content: '';
+    display: inline-block;
+    width: 5px;
+    height: 18px;
+    background-color: rgb(249, 103, 59);
+    margin-left: 10px;
+    margin-right: 20px;
+    vertical-align: middle;
+}
+.myCenter .right .right_1>div:nth-child(3) div:last-child table{
+    margin: 0 auto;
+    text-align: center;
+}
+.myCenter .right .right_1>div:nth-child(3) div:last-child table td{
+    width: 90px;
+    height: 90px;
+}
+.myCenter .right .right_1>div:nth-child(3) div:last-child table td img{
+    display: block;
+    margin: 0 auto;
+    width: 55px;
+    height: 55px;
+}
+/*设置边框*/
+.myCenter .right .right_1>div:nth-child(3) div:last-child table td:first-child{
+    border-right: 1px solid rgb(209,209,209);
+}
+.myCenter .right .right_1>div:nth-child(3) div:last-child table tr:first-child td{
+    border-bottom: 1px solid rgb(209,209,209);
+}
+
+/*右边第二行的div*/
+/*全部订单*/
+.myCenter .right .right_2{
+    margin-top: 20px;
+    border:1px solid rgb(218, 218, 218);
+}
+.myCenter .right .right_2 div:first-child{
+    color: black;
+    font-size: 18px;
+    padding: 10px 0px 10px 30px;
+    border-bottom:1px solid rgb(218, 218, 218);
+}
+/*订单内容*/
+.myCenter .right .right_2 div:last-child{
+    height: 150px;
+    font-size: 24px;
+    color: rgb(218, 218, 218);
+    line-height: 150px;
+    text-align: center;
+
+    position: relative;
+    top: 50%;
+}
+.myCenter .right .right_2 div:last-child img{
+    width: 70px;
+    height: 70px;
+    background-color: tomato;
+    
+    position: absolute;
+    margin-top: 35px;
+}
+.myCenter .right .right_2 div:last-child span{
+    margin-left: 90px;
+}
+
+
+/*右边第三行的div*/
+.myCenter .right .right_3{
+    margin-top: 20px;
+    border:1px solid rgb(218, 218, 218);
+}
+.myCenter .right .right_3>div{
+   height: 248px;
+   padding: 0px 30px;
+}
+/* 右边第三行的div所有的第一个div*/
+.myCenter .right .right_3>div div:first-child{
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    color: rgb(159, 159, 159);
+}
+.myCenter .right .right_3>div div:first-child::before{
+    content: '';
+    display: inline-block;
+    width: 5px;
+    height: 18px;
+    background-color: rgb(249, 103, 59);
+    margin-right: 10px;
+    vertical-align: middle;
+}
+.myCenter .right .right_3>div div:first-child::after{
+    content: '>';
+    float: right;
+}
+/* 右边第三行的div所有的第二个div （container）*/
+.myCenter .right .right_3 .container img{
+    display: block;
+    height: 100px;
+    margin: 15px auto;
+}
+.myCenter .right .right_3 div .container span{
+    color: #f23434;
+}
+.myCenter .right .right_3 div .container a{
+    color: #ff6a67;
+}
+.myCenter .right .right_3 div .container{
+    width: 230px;
+    font-size: 16px;
+    color: rgb(159, 159, 159);
+}
+.myCenter .right .right_3 div .container div:last-child{
+    margin-top: 10px;
+}
+/* 边框 */
+.myCenter .right .right_3>div:first-child{
+    border-right: 1px solid rgb(218, 218, 218);
+}
+.myCenter .right .right_3>div:nth-child(2){
+    border-right: 1px solid rgb(218, 218, 218);
+}
+
+
+
+/*右边第四行的div*/
+/*整体+第四行的上半部分*/
+.myCenter .right .right_4{
+    margin-top: 20px;
+    border:1px solid rgb(218, 218, 218);
+    background-color: rgb(245, 245, 245);
+    color: rgb(143, 143, 143);
+    font-size: 20px;
+}
+.myCenter .right .right_4>div:first-child{
+    height: 50px;
+    border-bottom:1px solid rgb(218, 218, 218);
+    margin: 0 auto;
+}
+.myCenter .right .right_4 div:first-child div{
+    display: inline-block;
+    cursor: pointer;
+}
+.myCenter .right .right_4 div:first-child div:first-child{
+    margin-left: 170px;
+    margin-right: 340px;
+    line-height: 50px;
+    border-bottom: 2px solid rgb(249, 103, 59);
+    color: black;
+}
+
+/*收藏物品*/
+.myCenter .right .right_4 .container{
+    height: 260px;
+    text-align: center;
+}
+.myCenter .right .right_4 .container img{
+    margin-top: 65px;
+    margin-bottom: 25px;
+}
+

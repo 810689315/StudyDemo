@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 坐标原点和tranform:translate有关系，别乱调translate */
+        body {
+            background-color: #000;
+        }
+
+        div {
+            width: 150px;
+            height: 150px;
+            color: rgb(255, 239, 0);
+            line-height: 150px;
+            text-align: center;
+            letter-spacing: 5px;
+            border-radius: 50%;
+            border: 2px solid #ccc;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -75px;
+            margin-top: -75px;
+            box-sizing: border-box;
+        }
+
+        @keyframes move {
+            0% {
+                transform: rotatez(0deg);
+            }
+
+            100% {
+                transform: rotateZ(360deg);
+            }
+        }
+
+        .cPath {
+            height: 75px;
+            border-radius: 75px 75px 0 0;
+            border-color: rgb(255, 239, 0);
+            border-bottom: none;
+            transform-origin: bottom;
+            animation: move 3s linear infinite;
+        }
+
+        .cPath::before {
+            content: "";
+            display: block;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: rgb(255, 239, 0);
+            box-shadow: 0px 0px 10px 0px rgb(255, 239, 0);
+            filter: brightness(130%);  
+            border: none;
+            position: absolute;
+            right: -8px;
+            top: 67px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>LOADING</div>
+    <div class="cPath">
+    </div>
+    <!-- <div class="cell"></div> -->
+
+
+</body>
+
+</html>

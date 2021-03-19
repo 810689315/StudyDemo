@@ -1,0 +1,45 @@
+/* 全局设置 */
+*{
+    padding: 0px;
+    margin: 0px;    
+}
+ol,ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+img{
+    border:0px;/*IE 67 图片有一个默认边框 */
+}
+
+body{
+    /* font-size:14px;
+    font-family: Arial,"微软雅黑","宋体";
+    font-weight: normal;
+    font-style: normal; */
+    font:normal normal 14px Arial,"微软雅黑","宋体";
+    color:#1c1c1c;
+}
+.center{/* 版心类 */
+    width:1200px;
+    margin:0 auto;
+}
+.fl{
+    float:left;
+}
+.fr{
+    float:right;
+}
+.clearfix::after,.clearfix::before{
+    content:'';
+    display: block;
+    height:0px;
+    overflow:hidden;
+    clear:both;
+}
+
+.litextcenter{
+    text-align: center;
+}

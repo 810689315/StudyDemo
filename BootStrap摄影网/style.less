@@ -1,0 +1,142 @@
+img{
+    width: 100%;
+    height: 100%;
+}
+.row{
+    margin: 0;
+}
+.mar-b30{
+    margin-bottom: 30px;
+}
+.logo-top{
+    margin: 30px auto;
+}
+.text-nav{
+    color: #333333;
+    font-size: 17px;
+    font-weight: bold;
+    
+    span{
+        padding: 0 30px;
+    }
+}
+.slide{
+    margin-top: 20px;
+}
+.our{
+    position: relative;
+    top: 150px;
+    margin-top: 75px;
+    transition: all 0.3s;
+    &>div{
+        width: 160px;
+        height: 38px;
+    }
+    h1{
+        .mar-b30()
+    }
+    p{
+        .mar-b30()
+    }
+}
+.tra-08{
+    transition: all 0.8s;
+}
+.cardBox{
+    display: inline-block;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    position: relative;
+    // 初始位置
+    top: 0;
+  
+    margin-top: 35px;
+    &:hover{
+        top: -30px !important;
+        box-shadow: 0 0 40px rgba(0,0,0,0.5);
+    }
+    .tra-08();
+   
+}
+
+.card{
+    &>div{
+        position: relative;
+        top: 100px;
+        .tra-08();
+
+    }
+        &>div:nth-of-type(1),
+        &>div:nth-of-type(4)
+        {
+            transition-delay: 0.2s;
+        }
+    
+        &>div:nth-of-type(2),
+        &>div:nth-of-type(5)
+        {
+            transition-delay: 0.3s;
+        }
+    
+        &>div:nth-of-type(3),
+        &>div:nth-of-type(6)
+        {
+            transition-delay: 0.4s;
+    }
+  
+}
+.dream{
+    position: relative;
+    left: -1000px;
+    transition: all 0.8s;
+    margin-top: 50px;
+}
+.imgBox{
+    display: inline-block;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    position: relative;
+    right: -1000px;
+    transition: all 0.8s;
+    margin-top: 50px;
+
+}
+
+.mock{
+    position: relative;
+    opacity: 0;
+}
+
+.text-box{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // padding: 0 50px;
+    &>div{
+    transition: all 0.8s;
+
+        width: 80%;
+        position: relative;
+    }
+}
+
+@media (max-width: 990px) {
+  .logo-top {
+    width: 204px;
+    height: 50px;
+  }
+  .text-nav{
+      display: none;
+  }
+}
+// 大于990px
+@media (min-width: 990px) {
+    .logo-top {
+      width: 246px;
+      height: 60px;
+    }
+    .pad-0{
+        padding: 0;
+    }
+  }

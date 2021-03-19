@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的订单</title>
+    <link rel="stylesheet" href="../StyleCss/common.css">
+    <link rel="stylesheet" href="../StyleCss/indexStyle.css">
+    <link rel="stylesheet" href="./stylecss/index.css">
+    <link rel="stylesheet" href="./stylecss/collect.css">
+    <link rel="stylesheet" href="./stylecss/OrderStyle.css">
+</head>
+
+<body>
+    <!-- 顶部导航栏 -->
+    <div class="topMenu">
+        <div class="center">
+            <span>您好！欢迎光临巴林职业装商城</span>
+            <ul>
+                <li><a href="">183******21∨</a></li>|
+                <li><a href="">购物车(0)</a></li>|
+                <li><a href="">注册</a></li>|
+                <li><a href="">微信</a></li>|
+                <li><a href="">微博</a></li>|
+                <li><a href="">收藏巴林</a></li>|
+                <li><a href="">English</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 搜索框 -->
+    <div class="topNav">
+        <div class="center">
+            <div class="logo fl"><img src="./img/a01b80b31de70a89a93d0f2cceae727.png" alt=""></div>
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">个人主页</a></li>
+                <li><a href="#">账户设置</a></li>
+                <li><a href="#">消息</a></li>
+            </ul>
+
+            <div>
+                <input class="search" type="text" id="searchBar">
+                <label for="searchBar">搜索</label>
+            </div>
+        </div>
+    </div>
+    <!-- 个人中心 -->
+    <div class="myCenter center">
+        <div class="left fl">
+            <div>个人中心</div>
+            <ul>
+                <li>我的交易（3）
+                    <a href="">我的订单</a>
+                    <a href="">评价商品</a>
+                    <a href="">依旧换新</a>
+                </li>
+                <li>我的资产（4）
+
+                    <a href="">我的积分</a>
+                    <a href="">我的抵用券</a>
+                    <a href="">我的礼品卡</a>
+                    <a href="">账户余额</a>
+                </li>
+                <li>我的关注（3）
+                    <a href="" class="product_collect">商品收藏</a>
+                    <a href="">店铺收藏</a>
+                    <a href="">林巴社区</a>
+                </li>
+                <li>在线客服（3）
+                    <a href="">在线投诉</a>
+                    <a href="">在线退换</a>
+                    <a href="">发票中心</a>
+                </li>
+                <li>会员资料（6）
+                    <a href="">个人资料</a>
+                    <a href="">地址管理</a>
+                    <a href="">安全设置</a>
+                    <a href="">我的活动</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="right fl">
+            <div class="collectBox">
+                <div class="orederNav">
+                    <ul class="fl">
+                        <li>所有订单</li>|
+                        <li>待付款</li>|
+                        <li>待发货</li>|
+                        <li>待收货</li>|
+                        <li>待评价</li>|
+                        <li>分阶段</li>
+                    </ul>
+                    <div class="fr">订单回收站</div>
+                </div>
+                <div class="orderSearch">
+                    <input type="text" placeholder="输入商品标题或订单号进行搜索">
+                    <a class="sarechBar" href="#">订单搜索</a>
+                </div>
+                <a href="#">更多搜索条件</a>
+
+
+                <div class="productCollect">
+                    <!-- <table>
+                        <thead>
+                            <tr>
+                                <td colspan="2">宝贝</td>
+                                <td>单价（元）</td>
+                                <td>数量</td>
+                                <td>商品操作</td>
+                                <td>实付款（元）</td>
+                                <td>交易状态</td>
+                                <td>交易操作</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="7">
+                                    <input type="checkBox">
+                                    <span>2015-08-16</span>
+                                    <span>订单号：1213929600848835</span>
+                                </td>
+                                <td>
+                                    <div><img src="./img/购物车06.jpg" alt=""></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div><img src="./img/购物车01.jpg" alt=""></div>
+                                </td>
+                                <td>
+                                    <div style="width: 200px;height: 40px;">AD欧美新款ol女装职业装女裤套装套裤西装外套正装两件套</div>
+                                    <div>
+                                        <img style="margin-right: 20px;" src="./img/购物车04.jpg" alt="">
+                                        <img src="./img/购物车05.jpg" alt="">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>9.90</div>
+                                </td>
+                                <td>
+                                    <div>1</div>
+                                </td>
+                                <td>
+                                    <div>电器城服务台</div>
+                                    <div>申请售后</div>
+                                    <div>投诉卖家</div>
+                                </td>
+                                <td>
+                                    <div>168.00</div>
+                                    <div>（含运费：0.00）</div>
+                                </td>
+                                <td>
+                                    <div>代付款</div>
+                                    <div>订单详情</div>
+                                </td>
+                                <td>
+                                    <div>追加评论</div>
+                                    <div>再次购买</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table> -->
+
+
+                    <!--  <li>
+                        </li> -->
+
+                    <div>
+                        <div>
+                            <input type="checkBox">
+                            <span><strong>2015-08-16</strong></span>
+                            <span>订单号:1213929600848835</span>
+                            <img class="fr" src="./img/购物车06.jpg" alt="">
+                        </div>
+
+                        <ul class="clearfix">
+                            <li>
+                                <div><img src="./img/购物车02.jpg" alt=""></div>
+                            </li>
+                            <li>
+                                <div style="width: 200px;">AD欧美新款ol女装职业装女裤套装套裤西装外套正装两件套</div>
+                                <div>
+                                    <img style="margin-right: 20px;" src="./img/购物车04.jpg" alt="">
+                                    <img src="./img/购物车05.jpg" alt="">
+                                </div>
+                            </li>
+                            <li>
+                                <div>9.90</div>
+                            </li>
+                            <li>
+                                <div>1</div>
+                            </li>
+                            <li class="litextcenter">
+                                <div>电器城服务台</div>
+                                <div>申请售后</div>
+                                <div>投诉卖家</div>
+                            </li>
+                            <li class="litextcenter">
+                                <div>168.00</div>
+                                <div>（含运费：0.00）</div>
+                            </li>
+                            <li class="litextcenter">
+                                <div>代付款</div>
+                                <div>订单详情</div>
+                            </li>
+                            <li class="litextcenter">
+                                <div>追加评论</div>
+                                <div>再次购买</div>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <!-- <ul class="clearfix">
+                        <li>
+                            <div><img src="./img/购物车03.jpg" alt=""></div>
+                        </li>
+                        <li>
+                            <div style="width: 200px;">AD欧美新款ol女装职业装女裤套装套裤西装外套正装两件套</div>
+                            <div>
+                                <img style="margin-right: 20px;" src="./img/购物车04.jpg" alt="">
+                                <img src="./img/购物车05.jpg" alt="">
+                            </div>
+                        </li>
+                        <li>
+                            <div>9.90</div>
+                        </li>
+                        <li>
+                            <div>1</div>
+                        </li>
+                        <li>
+                            <div>电器城服务台</div>
+                            <div>申请售后</div>
+                            <div>投诉卖家</div>
+                        </li>
+                        <li>
+                            <div>168.00</div>
+                            <div>（含运费：0.00）</div>
+                        </li>
+                        <li>
+                            <div>代付款</div>
+                            <div>订单详情</div>
+                        </li>
+                        <li>
+                            <div>追加评论</div>
+                            <div>再次购买</div>
+                        </li>
+
+                    </ul> -->
+
+                    <!-- <ul class="clearfix">
+                        <li>
+                            <div><img src="./img/购物车03.jpg" alt=""></div>
+                        </li>
+                        <li>
+                            <div style="width: 200px;">AD欧美新款ol女装职业装女裤套装套裤西装外套正装两件套</div>
+                            <div>
+                                <img style="margin-right: 20px;" src="./img/购物车04.jpg" alt="">
+                                <img src="./img/购物车05.jpg" alt="">
+                            </div>
+                        </li>
+                        <li>
+                            <div>9.90</div>
+                        </li>
+                        <li>
+                            <div>1</div>
+                        </li>
+                        <li>
+                            <div>电器城服务台</div>
+                            <div>申请售后</div>
+                            <div>投诉卖家</div>
+                        </li>
+                        <li>
+                            <div>168.00</div>
+                            <div>（含运费：0.00）</div>
+                        </li>
+                        <li>
+                            <div>代付款</div>
+                            <div>订单详情</div>
+                        </li>
+                        <li>
+                            <div>追加评论</div>
+                            <div>再次购买</div>
+                        </li>
+
+                    </ul> -->
+                </div>
+            </div>
+
+            <div class="other">
+                <div>
+                    <div>热卖商品</div>
+                    <div>根据浏览推荐</div>
+                    <div>24小时特惠</div>
+                </div>
+                <ul>
+                    <li>
+                        <div><img src="./img/店铺收藏-1_111.jpg" alt=""></div>
+                        <div>杰诺仕西服套装男士韩版修身休</div>
+                        <span>￥899</span>
+                    </li>
+                    <li>
+                        <div><img src="./img/店铺收藏-1_112 .jpg" alt=""></div>
+                        <div>杰诺仕西服套装男士韩版修身休</div>
+                        <span>￥899</span>
+                    </li>
+                    <li>
+                        <div><img src="./img/店铺收藏-1_113.jpg" alt=""></div>
+                        <div>杰诺仕西服套装男士韩版修身休</div>
+                        <span>￥899</span>
+                    </li>
+                    <li>
+                        <div><img src="./img/店铺收藏-1_114.jpg" alt=""></div>
+                        <div>杰诺仕西服套装男士韩版修身休</div>
+                        <span>￥899</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 商城承诺 -->
+    <div class="promise center clearfix">
+        <ul>
+            <li>
+                <img src="./img/promise_03.jpg" alt="">
+                <div>
+                    <h3>品质保证</h3>
+                    <span>质量保障 放心购买</span>
+                </div>
+            </li>
+            <li>
+                <img src="./img/promise_06.jpg" alt="">
+                <div>
+                    <h3>7天无理由退货</h3>
+                    <span>质量保障 放心购买</span>
+                </div>
+            </li>
+            <li>
+                <img src="./img/promise_09.jpg" alt="">
+                <div>
+                    <h3>货到付款</h3>
+                    <span>质量保障 放心购买</span>
+                </div>
+            </li>
+            <li>
+                <img src="./img/promise_12.jpg" alt="">
+                <div>
+                    <h3>帮助中心</h3>
+                    <span>你的购物指南</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- 帮助 -->
+    <div class="help center">
+        <ul>
+            <li>
+                <h3>购物指南</h3>
+                <a href="">
+                    <p>购物流程</p>
+                </a>
+                <a href="">
+                    <p>发票制度</p>
+                </a>
+                <a href="">
+                    <p>账户管理</p>
+                </a>
+                <a href="">
+                    <p>会员优惠</p>
+                </a>
+            </li>
+            <li>
+                <h3>支付方式</h3>
+                <a href="">
+                    <p>货到付款</p>
+                </a>
+                <a href="">
+                    <p>网上支付</p>
+                </a>
+                <a href="">
+                    <p>礼品卡支付</p>
+                </a>
+                <a href="">
+                    <p>银行转账</p>
+                </a>
+            </li>
+            <li>
+                <h3>订单服务</h3>
+                <a href="">
+                    <p>订单配送查询</p>
+                </a>
+                <a href="">
+                    <p>订单状态说明</p>
+                </a>
+                <a href="">
+                    <p>自助取消订单</p>
+                </a>
+                <a href="">
+                    <p>自主修改订单</p>
+                </a>
+            </li>
+            <li>
+                <h3>配送方式</h3>
+                <a href="">
+                    <p>配送范围及免邮标准</p>
+                </a>
+                <a href="">
+                    <p>当日递/次日达</p>
+                </a>
+                <a href="">
+                    <p>订单自提</p>
+                </a>
+                <a href="">
+                    <p>验货与签收</p>
+                </a>
+            </li>
+            <li>
+                <h3>退换货</h3>
+                <a href="">
+                    <p>退换货政策</p>
+                </a>
+                <a href="">
+                    <p>自助申请退换货</p>
+                </a>
+                <a href="">
+                    <p>退换货进度查询</p>
+                </a>
+                <a href="">
+                    <p>退款方式和时间</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- 加入我们 -->
+    <div class="joinus center">
+        <ul>
+            <li><a href="">公司简介</a></li>|
+            <li><a href="">Investor Relations</a></li>|
+            <li><a href="">诚征英才</a></li>|
+            <li><a href="">网站联盟</a></li>|
+            <li><a href="">广告服务</a></li>|
+            <li><a href="">当当招商</a></li>|
+            <li><a href="">机构销售</a></li>|
+            <li><a href="">手机版</a></li>|
+            <li><a href="">官方Blog</a></li>|
+            <li><a href="">热词搜索</a></li>
+        </ul>
+    </div>
+
+    <!-- 结尾 -->
+    <div class="abaaba center">
+        <div>Copyright (C)职业装2004- 2014, All Rights Reserved</div>
+        <div>京ICP证041189号|出版物经营许可证新出发京批字第直0673号|食品流通许可证: SP1101011010021855(1-1)</div>
+        <div>互联网药品信息服务资格证编号: (京)-非经营性-2012-0016|京公网安备110101000001号</div>
+    </div>
+</body>
+
+</html>

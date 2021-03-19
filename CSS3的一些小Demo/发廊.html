@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            perspective: 1000px;
+        }
+
+        .smallBox {
+            width: 300px;
+            height: 50px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            background-image: linear-gradient(34deg,
+                    black 0%, black 10%,
+                    white 10%, white 20%,
+                    black 20%, black 30%,
+                    white 30%, white 40%,
+                    black 40%, black 50%,
+                    white 50%, white 60%,
+                    black 60%, black 70%,
+                    white 70%, white 80%,
+                    black 80%, black 90%,
+                    white 90%);
+                    /* transform: translateX(-100px); */
+                    /* left: -260px; */
+                    animation: rotate 1s linear infinite;
+                    
+        }
+        .sm{
+            left: 300px;
+        }
+
+        .bigBox {
+            position: relative;
+            transform-style: preserve-3d;
+            width: 300px;
+            height: 50px;
+            margin: 200px auto;
+            border: 1px solid black;
+            transform: rotateZ(90deg);
+            overflow: hidden;
+        }
+
+        @keyframes rotate {
+            0% {
+                /* left: 0px; */
+                /* transform: rotateX(0deg); */
+                /* background-position: 0 0; */
+                transform: translateX(0px);
+            }
+
+            100% {
+                /* transform: rotateX(360deg); */
+                /* left: -300px; */
+                /* background-position: 1 1; */
+                transform: translateX(-300px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bigBox">
+        <div class="smallBox"></div>
+        <div class="smallBox sm"></div>
+    </div>
+</body>
+
+</html>

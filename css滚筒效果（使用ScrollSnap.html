@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .roller {
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+            width: 100%;
+            height: 100%;
+            /* overflow:auto 隐藏的内容会出现滚轮，可以显示出来 */
+            overflow: auto;
+            /* y轴方向卷动 配合li里的 */
+            scroll-snap-type: y mandatory;
+        }
+
+        /* 去掉卷动的滑动条 */
+        .roller::-webkit-scrollbar {
+            display: none;
+        }
+
+        .roller li {
+            width: 100%;
+            height: 60px;
+            text-align: center;
+            line-height: 60px;
+
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #333;
+            /* 取消文字选中 */
+            user-select: none;
+            /* y轴方向卷动的项目 */
+            scroll-snap-align: start;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0px;
+            background-color: blanchedalmond;
+        }
+
+        .roller-wrapper {
+            width: 400px;
+            height: 300px;
+            position: relative;
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3)0%, rgba(0, 0, 0, 0)25%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.3)100%);
+            box-shadow: inset 0px 0px 12px rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+        }
+
+        .roller-wrapper::after {
+            content: "";
+            position: absolute;
+            top: 120px;
+            width: 100%;
+            height: 60px;
+            /* 渐变在50%处同时设置两个值会出现镜面效果 */
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1)0%, rgba(0, 0, 0, 0.2)50%, rgba(0, 0, 0, 0.25)50%, rgba(0, 0, 0, 0.1)100%);
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12);
+            border-top: 1px solid rgba(0, 0, 0, 0.12);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+        }
+        .roller li:last-child{
+            margin-bottom: 120px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="roller-wrapper">
+        <ul class="roller">
+            <li></li>
+            <li></li>
+            <li>iPhone12 pro</li>
+            <li>iPhone12</li>
+            <li>iPhone12 mini</li>
+            <li>iPhoneSE2</li>
+            <li>iPhoneXS</li>
+            <li>iPhoneX</li>
+            <li>iPhoneXR</li>
+            <li>iPhoneSE</li>
+        </ul>
+    </div>
+
+</body>
+
+</html>

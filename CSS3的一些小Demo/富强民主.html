@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            perspective: 1000px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100vh;
+        }
+
+        div {
+            width: 100px;
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+        }
+
+        .box {
+            background-color: red;
+            transform-style: preserve-3d;
+            transform-origin: center center -10px;
+            transition: all .3s linear;
+        }
+
+        .or::before {
+            content: "";
+            display: block;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            background-color: burlywood;
+            top: -30px;
+            transform: translate3d(-10px, 30px, -10px) rotateY(90deg);
+            ;
+        }
+
+        .or::after {
+            content: "";
+            display: block;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            background-color: rosybrown;
+            top: -30px;
+            transform: translate3d(90px, 30px, -10px) rotateY(90deg);
+            ;
+        }
+
+        .box:hover {
+            transform: rotateX(90deg);
+        }
+
+        .or {
+            position: relative;
+        }
+
+        .ms {
+            background-color: tomato;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            transform-origin: center bottom;
+            transform: translateZ(-20px) rotateX(-90deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="or">富强
+            <div class="ms">民主</div>
+        </div>
+    </div>
+    <div class="box">
+        <div class="or">富强
+            <div class="ms">民主</div>
+        </div>
+    </div>
+    <div class="box">
+        <div class="or">富强
+            <div class="ms">民主</div>
+        </div>
+    </div>
+    <div class="box">
+        <div class="or">富强
+            <div class="ms">民主</div>
+        </div>
+    </div>
+    <div class="box">
+        <div class="or">富强
+            <div class="ms">民主</div>
+        </div>
+    </div>
+    <div class="box">
+        <div class="or">富强
+            <div class="ms">民主</div>
+        </div>
+    </div>
+    <div class="box">
+        <div class="or">富强
+            <div class="ms">民主</div>
+        </div>
+    </div>
+    <div class="box">
+        <div class="or">富强
+            <div class="ms">民主</div>
+        </div>
+    </div>
+    
+</body>
+
+</html>

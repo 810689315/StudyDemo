@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #000;
+        }
+
+        h1 {
+            --progress: 1;
+            color: transparent;
+            width: 50%;
+            margin: 0 auto;
+            font-size: 20px;
+            /* letter-spacing: -3px; */
+            /* calc 动态计算 运算符前后需要空格隔开*/
+            background-image: linear-gradient(#fff calc(100% - calc(var(--progress) * 100%)), rgb(235, 56, 56) calc(100% - calc(var(--progress) * 100%)));
+            background-clip: text;
+            -webkit-background-clip: text;
+
+            transform: scale(clamp(1, calc((var(--progress) - 0.99)*200), 1.3));
+            transition: transform .3s ease-out;
+        }
+
+        .buttons {
+            position: absolute;
+            bottom: 0;
+            padding: 20px;
+        }
+
+        .buttons button {
+            display: inline-block;
+            font-size: 32px;
+            background-color: #fff;
+            border: 0;
+            outline: none;
+            padding: 10px 20px;
+            border-radius: 12px;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        横断山，路难行。天如火来水似银。
+        亲人送水来解渴，军民鱼水一家人。
+        横断山，路难行。敌重兵，压黔境。
+        战士双脚走天下，四渡赤水出奇兵。
+        乌江天险重飞渡，兵临贵阳逼昆明。
+        敌人弃甲丢烟枪，我军乘胜赶路程。
+        调虎离山袭金沙，毛主席用兵真如神。</h1>
+    <div class="buttons">
+        <button id="empty">0%</button>
+        <button id="full">100%</button>
+    </div>
+
+    <script>
+        let progress = 0;
+        function run() {
+            if (progress < 1) {
+                progress = parseFloat((progress + 0.01).toFixed(2));
+
+                document.querySelector('h1').style.setProperty('--progress', progress);
+
+                setTimeout(run, 20);
+            }
+        }
+
+        document.querySelector('#empty').addEventListener('click', (e) => {
+            progress = 0;
+
+            document.querySelector('h1').style.setProperty('--progress', progress);
+        });
+
+        document.querySelector('#full').addEventListener('click', function (event) {
+            run();
+        })
+    </script>
+</body>
+
+</html>

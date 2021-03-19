@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        body {
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .box {
+            width: 400px;
+            color: white;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .box ul {
+            margin-top: 10px;
+            width: 480px;
+            display: flex;
+            flex-wrap: wrap;
+            border: 1px solid #cccccc;
+        }
+
+        .box ul li {
+            width: 100px;
+            height: 100px;
+            border-radius: 12px;
+            background-color: #cccccc;
+            margin: 10px;
+        }
+
+        .box ul li div {
+            width: 100%;
+        }
+
+        .box ul li i {
+            display: block;
+            width: 20px;
+            height: 20px;
+            margin: 5px;
+            border-radius: 50%;
+            background-color: black;
+        }
+
+        .box:nth-of-type(1) ul li:nth-child(2) {
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .box:nth-of-type(1) ul li:nth-child(2) {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .box:nth-of-type(1) ul li:nth-child(3) {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-end;
+        }
+
+        .box:nth-of-type(1) ul li:nth-child(4) {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+        }
+
+        .box:nth-of-type(1) ul li:nth-child(5) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box:nth-of-type(2) ul li:nth-child(1) {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .box:nth-of-type(2) ul li:nth-child(2) {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .box:nth-of-type(2) ul li:nth-child(3) {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .box:nth-of-type(2) ul li:nth-child(4) {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .box:nth-of-type(2) ul li:nth-child(5) {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .box:nth-of-type(2) ul li:nth-child(6) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .box:nth-of-type(2) ul li:nth-child(7) {
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+        }
+
+        .box:nth-of-type(2) ul li:nth-child(7) i:nth-child(2) {
+            align-self: center;
+        }
+
+        .box:nth-of-type(2) ul li:nth-child(8) {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-end;
+            flex-direction: column;
+        }
+
+        .box:nth-of-type(2) ul li:nth-child(8) i:nth-child(2) {
+            align-self: center;
+        }
+
+        .box:nth-of-type(2) ul li:nth-child(9) {
+            display: flex;
+            justify-content: flex-end;
+            flex-direction: column;
+        }
+
+        .box:nth-of-type(2) ul li:nth-child(9) i:nth-child(1) {
+            align-self: center;
+        }
+
+        .box:nth-of-type(2) ul li:nth-child(10) {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            flex-direction: column;
+        }
+
+        .box:nth-of-type(2) ul li:nth-child(10) i:nth-child(1) {
+            align-self: center;
+        }
+
+        .box:nth-of-type(2) ul li:nth-child(11) {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+        }
+
+        .box:nth-of-type(2) ul li:nth-child(11) i:nth-child(2) {
+            align-self: flex-end;
+        }
+
+        .box:nth-of-type(2) ul li:nth-child(12) {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+        }
+
+        .box:nth-of-type(2) ul li:nth-child(12) i:nth-child(1) {
+            align-self: flex-end;
+        }
+
+        .box:nth-of-type(3) ul li:nth-child(1) {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .box:nth-of-type(3) ul li:nth-child(2) {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .box:nth-of-type(3) ul li:nth-child(3) {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .box:nth-of-type(3) ul li:nth-child(3) i:nth-child(2) {
+            align-self: center;
+        }
+
+        .box:nth-of-type(3) ul li:nth-child(3) i:nth-child(3) {
+            align-self: flex-end;
+        }
+
+        .box:nth-of-type(3) ul li:nth-child(4) {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+        }
+
+        .box:nth-of-type(3) ul li:nth-child(4) i:nth-child(2) {
+            align-self: center;
+        }
+
+        .box:nth-of-type(3) ul li:nth-child(4) i:nth-child(1) {
+            align-self: flex-end;
+        }
+
+        .box:nth-of-type(3) ul li:nth-child(5) {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .box:nth-of-type(3) ul li:nth-child(6) {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .box:nth-of-type(3) ul li:nth-child(7) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .box:nth-of-type(3) ul li:nth-child(8) {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .box:nth-of-type(4) ul li:nth-child(1) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: space-between;
+        }
+
+        .box:nth-of-type(4) ul li:nth-child(2) {
+            background-color: red;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: space-between;
+        }
+
+        .box:nth-of-type(4) ul li:nth-child(2) i:last-child {
+            /* justify-items: flex-end; */
+            /* justify-items: flex-end; */
+        }
+
+        .box:nth-of-type(4) ul li:nth-child(3) {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-between;
+        }
+
+        .box:nth-of-type(4) ul li:nth-child(3) div:first-child {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .box:nth-of-type(4) ul li:nth-child(3) div:last-child {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .box:nth-of-type(4) ul li:nth-child(4) {
+            display: flex;
+            flex-wrap: wrap-reverse;
+            justify-content: space-between;
+            align-content: space-between;
+        }
+
+        .box:nth-of-type(4) ul li:nth-child(5) {
+            display: flex;
+            flex-wrap: wrap-reverse;
+            align-content: space-between;
+        }
+
+        .box:nth-of-type(4) ul li:nth-child(5) div:first-child {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .box:nth-of-type(4) ul li:nth-child(5) div:last-child {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .box:nth-of-type(4) ul li:nth-child(6) {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-between;
+        }
+
+        .box:nth-of-type(4) ul li:nth-child(6) div {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .box:nth-of-type(4) ul li:nth-child(7) {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-between;
+        }
+
+        .box:nth-of-type(4) ul li:nth-child(7) div {
+            display: flex;
+            justify-content: center;
+        }
+
+        .box:nth-of-type(4) ul li:nth-child(7) div:nth-child(2) {
+            justify-content: space-between;
+        }
+
+        .box:nth-of-type(5) ul li:nth-of-type(1) {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .box:nth-of-type(5) ul li:nth-of-type(1) div {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .box:nth-of-type(5) ul li:nth-of-type(1) div:nth-child(2) {
+            justify-content: center;
+        }
+
+        .box:nth-of-type(5) ul li:nth-child(2) {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .box:nth-of-type(5) ul li:nth-child(2) div {
+            display: flex;
+            justify-content: center;
+        }
+
+        .box:nth-of-type(5) ul li:nth-child(2) div:nth-child(2) {
+            justify-content: space-between;
+        }
+
+        .box:nth-of-type(5) ul li:nth-child(3) {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .box:nth-of-type(5) ul li:nth-child(3) div:first-child {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .box:nth-of-type(5) ul li:nth-child(3) div:nth-child(2) {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .box:nth-of-type(5) ul li:nth-child(3) div:last-child {
+            display: flex;
+        }
+
+        .box:nth-of-type(5) ul li:nth-child(4) {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .box:nth-of-type(5) ul li:nth-child(4) div:last-child {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .box:nth-of-type(5) ul li:nth-child(4) div:nth-child(2) {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .box:nth-of-type(6) ul li:nth-child(1) {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-between;
+        }
+
+        .box:nth-of-type(6) ul li:nth-child(1) div {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .box:nth-of-type(6) ul li:nth-child(2) {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-between;
+        }
+
+        .box:nth-of-type(6) ul li:nth-child(2) div {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .box:nth-of-type(7) ul li:nth-child(1) {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-between;
+        }
+
+        .box:nth-of-type(7) ul li:nth-child(1) div {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .box:nth-of-type(7) ul li:nth-child(2) {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-between;
+        }
+
+        .box:nth-of-type(7) ul li:nth-child(2) div {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .box:nth-of-type(8) ul li {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: space-between;
+        }
+        .box:nth-of-type(9) ul li {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: space-between;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        一点
+        <ul>
+            <li>
+                <i></i>
+            </li>
+            <li><i></i></li>
+            <li><i></i></li>
+            <li><i></i></li>
+            <li><i></i></li>
+        </ul>
+    </div>
+    <div class="box">
+        二点
+        <ul>
+            <li>
+                <i></i><i></i>
+            </li>
+            <li><i></i><i></i></li>
+            <li><i></i><i></i></li>
+            <li><i></i><i></i></li>
+            <li><i></i><i></i></li>
+            <li><i></i><i></i></li>
+            <li><i></i><i></i></li>
+            <li><i></i><i></i></li>
+            <li><i></i><i></i></li>
+            <li><i></i><i></i></li>
+            <li><i></i><i></i></li>
+            <li><i></i><i></i></li>
+        </ul>
+
+    </div>
+    <div class="box">
+        三点
+        <ul>
+            <li>
+                <i></i>
+                <i></i>
+                <i></i>
+            </li>
+            <li>
+                <i></i>
+                <i></i>
+                <i></i>
+            </li>
+            <li>
+                <i></i>
+                <i></i>
+                <i></i>
+            </li>
+            <li>
+                <i></i>
+                <i></i>
+                <i></i>
+            </li>
+            <li>
+                <i></i>
+                <i></i>
+                <i></i>
+            </li>
+            <li>
+                <i></i>
+                <i></i>
+                <i></i>
+            </li>
+            <li>
+                <i></i>
+                <i></i>
+                <i></i>
+            </li>
+            <li>
+                <i></i>
+                <i></i>
+                <i></i>
+            </li>
+
+        </ul>
+    </div>
+    <div class="box">
+        四点
+        <ul>
+            <li><i></i><i></i><i></i><i></i></li>
+            <li><i></i><i></i><i></i><i></i></li>
+            <li>
+                <div> <i></i><i></i><i></i></div>
+                <div><i></i></div>
+            </li>
+            <li><i></i><i></i><i></i><i></i></li>
+            <li>
+                <div> <i></i><i></i><i></i></div>
+                <div><i></i></div>
+            </li>
+            <li>
+                <div><i></i><i></i></div>
+                <div><i></i><i></i></div>
+            </li>
+            <li>
+                <div><i></i></div>
+                <div><i></i><i></i></div>
+                <div><i></i></div>
+            </li>
+        </ul>
+    </div>
+    <div class="box">
+        五点
+        <ul>
+            <li>
+                <div><i></i><i></i></div>
+                <div><i></i></div>
+                <div><i></i><i></i></div>
+            </li>
+            <li>
+                <div><i></i></div>
+                <div><i></i><i></i><i></i></div>
+                <div><i></i></div>
+            </li>
+            <li>
+                <div><i></i></div>
+                <div><i></i><i></i><i></i></div>
+                <div><i></i></div>
+            </li>
+            <li>
+                <div><i></i></div>
+                <div><i></i><i></i><i></i></div>
+                <div><i></i></div>
+            </li>
+        </ul>
+    </div>
+    <div class="box">
+        六点
+        <ul>
+            <li>
+                <div><i></i><i></i></div>
+                <div><i></i><i></i></div>
+                <div><i></i><i></i></div>
+            </li>
+            <li>
+                <div><i></i><i></i><i></i></div>
+                <div><i></i><i></i><i></i></div>
+            </li>
+        </ul>
+    </div>
+    <div class="box">
+        七点
+        <ul>
+            <li>
+                <div><i></i><i></i></div>
+                <div><i></i><i></i><i></i></div>
+                <div><i></i><i></i></div>
+            </li>
+            <li>
+                <div><i></i><i></i><i></i></div>
+                <div><i></i></div>
+                <div><i></i><i></i><i></i></div>
+            </li>
+        </ul>
+    </div>
+    <div class="box">
+        八点
+        <ul>
+            <li>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+            </li>
+
+        </ul>
+    </div>
+    <div class="box">
+        九点
+        <ul>
+            <li>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

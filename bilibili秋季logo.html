@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0px;
+        }
+
+        header {
+            height: 160px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header div {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            /* ustify-content 用于设置或检索弹性盒子元素在主轴（横轴）方向上的对齐方式 */
+            justify-content: center;
+            align-items: center;
+
+            --offset: 0px;
+            --blur: 2px;
+        }
+
+        header div img {
+            display: block;
+            width: 110%;
+            height: 100%;
+            /* object-fit 属性指定元素的内容应该如何去适应指定容器的高度与宽度。 */
+            object-fit: cover;
+            /* 当只有一个参数时，是x轴方向上的位移 */
+            transform: translate(var(--offset));
+            /* 给图像设置高斯模糊。 值越大越模糊。 */
+            filter: blur(var(--blur));
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div><img src="https://assets.codepen.io/2002878/bilibili-autumn-1.png"></div>
+        <div><img src="https://assets.codepen.io/2002878/bilibili-autumn-2.png"></div>
+        <div><img src="https://assets.codepen.io/2002878/bilibili-autumn-3.png"></div>
+        <div><img src="https://assets.codepen.io/2002878/bilibili-autumn-4.png"></div>
+        <div><img src="https://assets.codepen.io/2002878/bilibili-autumn-5.png"></div>
+        <div><img src="https://assets.codepen.io/2002878/bilibili-autumn-6.png"></div>
+    </header>
+
+    <script>
+        const images = document.querySelectorAll('img');
+
+        document.querySelector('header').addEventListener('mousemove', (e) => {
+            e = e || window.event;
+            // outerWidth属性设置或返回窗口的外部宽度，包括所有的界面元素（如工具栏/滚动）。鼠标从左到右区间为[0,1]
+            let percentage = e.clientX / window.outerWidth;
+            //[0，10]
+            let offset = 10 * percentage;
+            let blur = 20;
+            for (let [index, image] of images.entries()) {
+                //越在后面的图片在x轴方向位移越多。
+                offset *= 1.3;
+
+                let blurValue = (Math.pow((index / images.length - percentage), 2) * blur);
+
+                image.style.setProperty('--offset', `${offset}px`);
+                image.style.setProperty('--blur', `${blurValue}px`);
+            }
+        })
+
+
+    </script>
+</body>
+
+</html>

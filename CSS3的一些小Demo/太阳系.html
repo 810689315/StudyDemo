@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background-color: #000;
+        }
+
+        .ri {
+            width: 50px;
+            height: 50px;
+            background-color: rgb(255, 255, 0);
+            box-shadow: 0px 0px 30px 0px rgb(255, 255, 0);
+            filter: brightness(150%);
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .c {
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            border-radius: 50%;
+            filter: brightness(130%);
+        }
+
+        .c1 {
+            margin-top: -60px;
+            margin-left: -10px;
+            background-color: rgb(2, 128, 0);
+            box-shadow: 0px 0px 10px 0px rgb(2, 128, 0);
+            transform-origin: 10px 60px;
+            transform: rotateZ(0deg);
+            animation: move 8s linear infinite;
+        }
+
+        .c2 {
+            margin-top: -95px;
+            margin-left: -10px;
+            background-color: rgb(254, 2, 0);
+            box-shadow: 0px 0px 10px 0px rgb(254, 2, 0);
+            transform-origin: 10px 95px;
+            transform: rotateZ(0deg);
+            animation: move 22s linear infinite;
+
+        }
+
+        .c3 {
+            margin-left: -10px;
+            margin-top: -130px;
+            background-color: rgb(1, 2, 250);
+            box-shadow: 0px 0px 10px 0px rgb(1, 2, 250);
+            transform-origin: 10px 130px;
+            transform: rotateZ(0deg);
+            animation: move 36s linear infinite;
+
+        }
+
+        .c4 {
+            margin-left: -10px;
+            margin-top: -165px;
+            background-color: rgb(131, 0, 125);
+            box-shadow: 0px 0px 10px 0px rgb(131, 0, 125);
+            transform-origin: 10px 165px;
+            transform: rotateZ(0deg);
+            animation: move 68s linear infinite;
+
+        }
+
+        .c5 {
+            margin-left: -10px;
+            margin-top: -200px;
+            background-color: rgb(252, 224, 229);
+            box-shadow: 0px 0px 10px 0px rgb(252, 224, 229);
+            transform-origin: 10px 200px;
+            transform: rotateZ(0deg);
+            animation: move 433s linear infinite;
+        }
+
+        .c6 {
+            margin-left: -10px;
+            margin-top: -235px;
+            background-color: rgb(254, 167, 2);
+            box-shadow: 0px 0px 10px 0px rgb(254, 167, 2);
+            transform-origin: 10px 235px;
+            transform: rotateZ(0deg);
+            animation: move 1075s linear infinite;
+
+        }
+
+        .c7 {
+            margin-left: -10px;
+            margin-top: -270px;
+            background-color: rgb(131, 1, 0);
+            box-shadow: 0px 0px 10px 0px rgb(131, 1, 0);
+            transform-origin: 10px 270px;
+            animation: move 3068s linear infinite;
+            transform: rotateZ(0deg);
+
+        }
+
+        .c8 {
+            margin-left: -10px;
+            margin-top: -305px;
+            background-color: rgb(132, 207, 232);
+            box-shadow: 0px 0px 10px 0px rgb(132, 207, 232);
+            transform-origin: 10px 305px;
+            animation: move 168s linear infinite;
+            transform: rotateZ(0deg);
+        }
+
+        .c9 {
+            margin-left: -10px;
+            margin-top: -340px;
+            background-color: rgb(148, 242, 148);
+            box-shadow: 0px 0px 10px 0px rgb(148, 242, 148);
+            transform-origin: 10px 340px;
+            animation: move 100s linear infinite;
+            transform: rotateZ(0deg);
+        }
+
+        .cPath {
+            border-radius: 50%;
+            border: 1px solid white;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .cp1 {
+            width: 100px;
+            height: 100px;
+        }
+
+        .cp2 {
+            width: 170px;
+            height: 170px;
+        }
+
+        .cp3 {
+            width: 240px;
+            height: 240px;
+        }
+
+        .cp4 {
+            width: 310px;
+            height: 310px;
+        }
+
+        .cp5 {
+            width: 380px;
+            height: 380px;
+        }
+
+        .cp6 {
+            width: 450px;
+            height: 450px;
+        }
+
+        .cp7 {
+            width: 520px;
+            height: 520px;
+        }
+
+        .cp8 {
+            width: 590px;
+            height: 590px;
+        }
+
+        .cp9 {
+            width: 660px;
+            height: 660px;
+        }
+
+        @keyframes move {
+            0% {
+                transform: rotateZ(0deg);
+            }
+
+            100% {
+                transform: rotateZ(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="ri"></div>
+        <div class="cPath cp1">
+            <div class="c c1"></div>
+        </div>
+        <div class="cPath cp2">
+            <div class="c c2"></div>
+        </div>
+        <div class="cPath cp3">
+            <div class="c c3"></div>
+        </div>
+        <div class="cPath cp4">
+            <div class="c c4"></div>
+        </div>
+        <div class="cPath cp5">
+            <div class="c c5"></div>
+        </div>
+        <div class="cPath cp6">
+            <div class="c c6"></div>
+        </div>
+        <div class="cPath cp7">
+            <div class="c c7"></div>
+        </div>
+        <div class="cPath cp8">
+            <div class="c c8"></div>
+        </div>
+        <div class="cPath cp9">
+            <div class="c c9"></div>
+        </div>
+    </div>
+</body>
+
+</html>

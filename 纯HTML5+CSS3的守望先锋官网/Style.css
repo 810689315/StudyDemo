@@ -1,0 +1,925 @@
+body{
+    margin: 0;
+    overflow-x: hidden;
+}
+a{
+    text-decoration: none;
+    color: lightgray;
+}
+/* topBar相关代码 */
+
+/* 顶部导航栏的整体 */
+.topBar{
+    width: 100%;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 0px;
+    position: relative;
+}
+
+/* 视频 */
+video{
+    max-height: 960px;
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0;
+    z-index: -1;
+}
+
+/* 设定UI的范围 */
+.topBarRange{
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* 使顶部导航栏的左边的UI向左浮动 */
+.topBar .leftbox{
+    float: left;
+}
+
+/* 使顶部导航栏的右边的UI向右浮动 */
+.topBar .rightBox{
+    float: right;
+    position: relative;
+}
+
+/* 给所有li清楚样式 */
+.topBar div>ul{
+    margin: 0px;
+    list-style: none;
+}
+
+/* 给所有li的格式添加属性和触摸效果*/
+.topBar div>ul>li{
+    height: 40px;
+    float: left;
+    line-height: 40px;
+    margin-right: 20px;
+    /* 基线对齐 */
+    vertical-align: middle;
+    color: lightgray;
+}
+.topBar div>ul>li:hover{
+    color:white;
+}
+
+/* 第一个li的图标 */
+.topBarLogo{
+    width: 70px;
+    background-image: url("https://blz.nosdn.127.net/1/fsbnet/icon-sprite.png");
+    background-position: -18px -75px;    
+}
+
+/* 设置右边的小箭头和触摸 */
+.topBar .leftbox>ul>li:nth-of-type(2)::after,
+.topBar .leftbox>ul>li:nth-of-type(5)::after,
+.topBar .rightBox>ul>li:nth-last-of-type(1)::after{
+    content: '';
+    display: inline-block;
+    width: 14px;
+    height: 7px;
+    background-image: url(https://blz.nosdn.127.net/1/fsbnet/icon-sprite.png);
+    background-position: -147px -131px;
+}
+.topBar .leftbox>ul>li:nth-of-type(2):hover::after,
+.topBar .leftbox>ul>li:nth-of-type(5):hover::after,
+.topBar .rightBox>ul>li:nth-last-of-type(1):hover::after{
+    content: '';
+    display: inline-block;
+    width: 14px;
+    height: 7px;
+    background-image: url(https://blz.nosdn.127.net/1/fsbnet/icon-sprite.png);
+    background-position: -147px -131px;
+    transform:rotateX(180deg);
+}
+
+/* topbar的导航栏触摸隐藏动画效果 */
+
+.topHiddenCell{
+    list-style: none;
+    position: absolute;
+    width: 100%;
+    background-color: #283244;
+    padding: 20px;
+    z-index: 1;
+    left: 0px;
+    top: 40px;
+    visibility: hidden;
+    transition: all 0.3s;
+
+    opacity: 0;
+
+    /* 让所有子级元素水平居中排列 */
+    text-align: center;
+
+    border: 1px solid rgba(255,255,255,0.15);
+}
+.topHiddenCell>li{
+    display: inline-block;
+    width: 140px;
+    height: 180px;
+    background-size: auto 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 15px;
+    margin-left: 15px;
+    /* margin-top: -200px; */
+    
+    opacity: 0;
+
+    border: 0.8px solid rgba(255,255,255,0.3);
+    box-shadow: 0 8px 17px rgba(0,0,0,0.5);
+
+    position: relative;
+    top: -205px;
+    /* 变化高度的动画效果 */
+    transition: all 0.3s;
+
+}
+.topHiddenCell>li:hover{
+    /* 高亮 */
+    filter: brightness(120%);
+    border: 0.8px solid rgba(255,255,255,0.5);
+}
+.topHiddenCell>li:nth-of-type(1){
+    background-image: url("https://blz.nosdn.127.net/1/fsbnet/card-overwatch-CN-85c98611cefd3018.jpg");
+}
+.topHiddenCell>li:nth-of-type(2){
+    background-image: url("https://blz.nosdn.127.net/1/fsbnet/card-world-of-warcraft-CN-c4bebe45e5af0993.jpg");
+}
+.topHiddenCell>li:nth-of-type(3){
+    background-image: url("https://blz.nosdn.127.net/1/fsbnet/card-hearthstone-CN-538b49564ab2122a.jpg");
+}
+.topHiddenCell>li:nth-of-type(4){
+    background-image: url("https://blz.nosdn.127.net/1/fsbnet/card-heroes-of-the-storm-CN-bacafbbddcf92348.jpg");
+}
+.topHiddenCell>li:nth-of-type(5){
+    background-image: url("https://blz.nosdn.127.net/1/fsbnet/card-warcraft-3-reforged-CN.jpg");
+}
+.topHiddenCell>li:nth-of-type(6){
+    background-image: url("https://blz.nosdn.127.net/1/fsbnet/card-diablo-immortal-CN.jpg");
+}
+.topHiddenCell>li:nth-of-type(7){
+    background-image: url("https://blz.nosdn.127.net/1/fsbnet/card-diablo-3-CN-0d57444efa52a79b.jpg");
+}
+.topHiddenCell>li:nth-of-type(8){
+    background-image: url("https://blz.nosdn.127.net/1/fsbnet/card-starcraft-2-CN-de310c5ddfb63a49.jpg");
+}
+.topHiddenCell>li:nth-of-type(9){
+    background-image: url("https://blz.nosdn.127.net/1/fsbnet/card-starcraft-remastered-CN.jpg");
+}
+
+.topBar>.topBarRange>.leftbox>ul>li:hover .topHiddenCell>li:nth-of-type(1){
+    transition-delay: 0.05s;
+}
+.topBar>.topBarRange>.leftbox>ul>li:hover .topHiddenCell>li:nth-of-type(2){
+    transition-delay: 0.10s;
+}
+.topBar>.topBarRange>.leftbox>ul>li:hover .topHiddenCell>li:nth-of-type(3){
+    transition-delay: 0.15s;
+}
+.topBar>.topBarRange>.leftbox>ul>li:hover .topHiddenCell>li:nth-of-type(4){
+    transition-delay: 0.20s;
+}
+.topBar>.topBarRange>.leftbox>ul>li:hover .topHiddenCell>li:nth-of-type(5){
+    transition-delay: 0.25s;
+}
+.topBar>.topBarRange>.leftbox>ul>li:hover .topHiddenCell>li:nth-of-type(6){
+    transition-delay: 0.30s;
+}
+.topBar>.topBarRange>.leftbox>ul>li:hover .topHiddenCell>li:nth-of-type(7){
+    transition-delay: 0.35s;
+}
+.topBar>.topBarRange>.leftbox>ul>li:hover .topHiddenCell>li:nth-of-type(8){
+    transition-delay: 0.40s;
+}
+.topBar>.topBarRange>.leftbox>ul>li:hover .topHiddenCell>li:nth-of-type(9){
+    transition-delay: 0.45s;
+}
+/* .beautifyBox{
+    display: inline-block;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: tomato;
+} */
+
+/* 展开ul */
+.topBar .leftbox>ul>li:nth-child(2):hover .topHiddenCell{
+    visibility: visible;
+    opacity: 1;
+}
+/* 展开li */
+.topBar .leftbox>ul>li:nth-child(2) .topHiddenCell>li{
+    top: 0px;
+    opacity: 1;
+}
+/* 使屏幕变灰 */
+/* .topBar>.topBarRange>.leftbox>ul>li:hover .topHiddenCell::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+} */
+
+/*e-soprt相关代码*/
+
+.eSportRange{
+    z-index: 5;
+    width: 100%;
+    /* height: 270px; */
+    overflow: hidden;
+    position: absolute;
+    top: 40px;
+    left: 0px;
+    background-color: rgba(21,26,35,.95);
+    background: radial-gradient(ellipse farthest-side at center top,#283244 0,rgba(21,26,35,.95) 100%);
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,.2);
+    border: 0.8px solid rgba(255,255,255,0.3);  
+    
+    /*上部分和下部分垂直分布，下部分设置高度，上部分因为弹性盒子自适应*/
+    flex-direction: column;
+    
+}
+ /* 6个游戏的盒子 */
+ .eSoprt_Top{    
+    /* 让6个游戏盒子变成弹性盒子 */
+    display: flex;
+    /* 弹性盒子剧中排列 */
+    justify-content: center;
+
+}
+.eSoprt_Top .eSoprt_TopBox{
+    /* 6个游戏盒子中的一个，宽高由leftBox和rightBox组合决定。本身也是弹性盒子，和其他五个盒子组成弹性盒子*/
+    display: flex;
+    text-align: center;
+    /*隐藏右边的盒子*/
+    overflow: hidden;
+}
+.eSoprt_TopBox .eSoprt_TopBoxleft{/*leftBox和rightBox组合成弹性盒子，rightBox的宽高已经确定，leftBox根据弹性盒子自适应*/
+    flex: 1;
+}
+.eSoprt_TopBox .eSoprt_TopBoxleft a {
+    display: block;
+    width: 100%;
+    /*最内层的a标签高度为100px，3个a嵌套起来就是300px*/
+    height: 300px;
+}
+.eSoprt_TopBox .eSoprt_TopBoxRight{ /*弹性盒子 宽高由a集合决定 已固定*/
+    /*变化盒子的宽度，因为img和a本来就是不能改变的量*/
+    width: 0px;
+    /*淡入淡出的效果*/
+    opacity: 0;
+    transition: all 0.3s;
+}
+.eSoprt_TopBox .eSoprt_TopBoxRight a{ /*a标签设置宽高，保证上一级弹性盒子rightbBox的宽高自适应a集合的宽高。*/
+    line-height: 0px;
+    /* 让原本是行内元素水平分布的a标签变成块级元素，垂直排布 */
+    display: block;
+    /*固定死img图片的大小*/
+    height: 100px;
+    width: 100px;
+}
+.eSoprt_TopBox .eSoprt_TopBoxRight a img{
+    /*让img的尺寸自适应a标签*/
+    max-width: 100%;
+    height: auto;
+}
+
+.eSoprt_TopBoxleft>a:hover{
+    color: #fff;
+    background-color: rgba(255,255,255,.05);
+}
+.eSoprt_TopBoxRight>a:hover{
+    color: #fff;
+    background-color: rgba(255,255,255,.05);
+}
+.eSoprt_Bottom a:hover{
+    color: #fff;
+    background-color: rgba(255,255,255,.05);
+}
+
+
+.eSoprt_TopBox:hover .eSoprt_TopBoxRight{
+    /*隐藏区域出现*/
+    width: 100px;
+    /*淡入效果*/
+    opacity: 1;
+}
+
+
+ /* 隐藏部分的下半部分  */
+ .eSoprt_Bottom{
+    height: 40px;
+    line-height: 40px;
+    font-size: 15px;
+    text-align: center;
+    border-top: 0.8px solid rgba(255,255,255,0.3);
+    overflow: hidden;
+}
+.eSoprt_Bottom a:first-child{
+    margin-right: 30px;
+}
+.eSoprt_Bottom a:first-child::before{
+    content: '🏆';
+    width: 24px;
+    height: 24px;
+}
+.eSoprt_Bottom a:last-child::before{
+    content: '🏆';
+    width: 24px;
+    height: 24px;
+}
+
+
+/* 所有需要隐藏的设置 */
+.eSportRange{
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s;
+}
+.eSoprt_TopBox{
+    visibility: hidden;
+    opacity: 0;
+    position: relative;
+    top: -240px;
+    transition: all 0.3s;
+}
+.eSoprt_Bottom a{
+    position: relative;
+    opacity: 0;
+    top: -290px;
+    transition: top 1.3s;
+}
+.eSoprt:hover .eSportRange{
+    visibility: visible;
+    opacity: 1;    
+}
+.eSoprt:hover .eSoprt_TopBox{
+    visibility: visible;
+    opacity: 1;    
+    top: 0px;
+}
+.eSoprt:hover .eSoprt_Bottom a{
+    opacity: 1;
+    top:0px;
+}
+
+ /*延迟出现*/
+.eSoprt:hover .eSoprt_TopBox:nth-of-type(1){
+    transition-delay: 0.05s;
+}
+.eSoprt:hover .eSoprt_TopBox:nth-of-type(2){
+    transition-delay: 0.10s;
+}
+.eSoprt:hover .eSoprt_TopBox:nth-of-type(3){
+    transition-delay: 0.15s;
+}
+.eSoprt:hover .eSoprt_TopBox:nth-of-type(4){
+    transition-delay: 0.20s;
+}
+.eSoprt:hover .eSoprt_TopBox:nth-of-type(5){
+    transition-delay: 0.25s;
+}
+.eSoprt:hover .eSoprt_TopBox:nth-of-type(6){
+    transition-delay: 0.30s;
+}
+
+
+/*你的通行证*/
+.userIDBox{
+    width: 300px;
+    background: linear-gradient(to bottom,#283244 0,rgba(21,26,35,.95) 100%);
+    position: absolute;
+    right: 0px;
+    z-index: 5;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+.userIDBox a{
+    display: block;
+    width: auto;
+    height: 31px;
+    line-height: 31px;  
+    padding: 5px 20px;
+    font-size: 14px;
+    color: rgba(255,255,255,.7);
+}
+.userIDBox .a1_box a{
+    padding: 0px;
+}
+.a2_box{
+    border-bottom: 0.8px solid rgba(255,255,255,0.1);
+    border-top: 0.8px solid rgba(255,255,255,0.1);
+}
+.a1_box{
+    background-color: #0e86ca;
+    border: solid 1px #00aeff;
+    margin: 20px 20px;
+    text-align: center;
+}
+.a1_box:hover{
+    background-color: #00aeff;
+    border: solid 1px #00aeff;
+}
+.a2::before{
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url(https://blz.nosdn.127.net/1/fsbnet/icon-sprite.png);
+    background-position: -140px -14px;
+    background-size: 251px auto;
+    background-repeat:no-repeat;
+    margin-right: 10px;
+    visibility: center;
+    vertical-align: middle;
+}
+.a3::before{
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url(https://blz.nosdn.127.net/1/fsbnet/icon-sprite.png);
+    background-position: -198px -13px;
+    background-size: 251px auto;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+    border-bottom: none;
+    /*让图片和文字对齐居中*/
+    vertical-align: middle;
+    position: relative;
+    top: -5px;
+    right: 3px;
+}
+.a1:hover,
+.a2:hover,
+.a3:hover{
+    color: white;
+    background-color: rgba(255,255,255,.05);
+}
+/*需要隐藏的地方*/
+.userIDBox{
+    visibility: hidden;
+    opacity: 0;
+}
+.userID:hover .userIDBox{
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+
+/* middleHiddenCell相关代码 */
+
+/* middleBar的属性 */
+.middleBar{
+    top: 100px;
+    position: fixed;
+    width: 100%;
+    height: 48px;
+    color: #4b535d;
+    background-color: #f2f1ed;
+}
+
+/* 使middleBar的左边的UI向左浮动 */
+.middleBar>.leftBox{
+    float: left;
+}
+
+/* 使middleBar的右边的UI向右浮动 */
+.middleBar>.rightBox{
+    float: right;
+}
+
+/* 给所有li清楚样式 */
+.middleBar>.leftBox>ul{
+    top: 200px;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+/* 给所有li的格式添加属性和触摸 */
+.middleBar>.leftBox>ul>li{
+    float: left;
+    padding: 0px 20px;
+    line-height: 48px;
+    vertical-align: middle;
+    color: #4b535d;
+    border-right: 1px solid #e5e3dc;  
+
+    position: relative;
+}
+.middleBar>.leftBox>ul>li:hover{
+    background-color: #353c42;
+    color: #ff9c00;
+}
+
+/* LOGO */
+.middleBar .leftBox>ul>li:nth-of-type(1){
+    width: 53px;
+    height: 48px;
+    padding: 0px;
+    border: 1px solid #4b535d;
+    background-image: url('https://overwatch.nosdn.127.net/1/assets/img/logos/nav_logo_new.jpg');
+}
+
+/* 右边小箭头和触摸 */
+.middleBar .leftBox>ul>li:nth-of-type(2)::after,
+.middleBar .leftBox>ul>li:nth-of-type(4)::after,
+.middleBar .leftBox>ul>li:nth-of-type(6)::after,
+.middleBar .leftBox>ul>li:nth-of-type(8)::after,
+.middleBar .leftBox>ul>li:nth-of-type(9)::after
+{   
+    content: '';
+    display: inline-block;
+    width: 14px;
+    height: 8px;
+    background-image: url('https://overwatch.nosdn.127.net/1/assets/img/icons/menus/nav_arrow.png');
+    margin-left: 5px;
+    transition: transform 0.3s;
+}
+.middleBar .leftBox>ul>li:nth-of-type(2):hover::after,
+.middleBar .leftBox>ul>li:nth-of-type(4):hover::after,
+.middleBar .leftBox>ul>li:nth-of-type(6):hover::after,
+.middleBar .leftBox>ul>li:nth-of-type(8):hover::after,
+.middleBar .leftBox>ul>li:nth-of-type(9):hover::after
+{
+    content: '';
+    display: inline-block;
+    width: 14px;
+    height: 8px;
+    background-position: 0 -8px;
+    background-image: url('https://overwatch.nosdn.127.net/1/assets/img/icons/menus/nav_arrow.png');
+    transform:rotate(180deg);
+    margin-left: 5px;
+}
+
+/* 展开隐藏界面 */
+
+/* ul设置 */
+.middleHiddenCell{
+    list-style: none;
+    position: absolute;
+    left: 0px;
+    background-color: #353c42;
+    padding: 0px;
+    /* 控制隐藏的菜单栏的开关 0为关闭，1为打开 */
+    opacity: 0;
+
+    visibility: hidden;
+}
+/* li设置 */
+.middleHiddenCell>li{
+    width: 180px;
+    height: 50px;
+    color: white;
+    border-bottom: 1px solid #4b535d;
+
+}
+.middleHiddenCell>li::before{
+    content: '';
+    width: 5px;
+    height: 14px;
+    display: inline-block;
+    margin-left: 3px;
+    border-left: 1px solid rgba(0, 0, 0, 0);
+}
+.middleHiddenCell>li:hover::before{
+    border-left: 1px solid #ff9c00;
+}
+.hiddenBar:hover .middleHiddenCell{
+    /* 都要添加 */
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/* 右边购买标签和触摸 */
+.middleBar .rightBox{
+    width: 110px;
+    padding: 0px 10px;
+    line-height: 48px;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+    background-color:#f7931e;
+    border-right: none;
+}
+.middleBar .rightBox:hover{
+    background-color: #f89e35;
+}   
+
+.bigLogo{
+    width: 396px;
+    height: 88px;
+    margin: 0 auto;
+    margin-top: 40vh;
+    background-image: url('https://overwatch.nosdn.127.net/1/assets/img/pages/home/logo_new_0321.png');
+    background-size: 100% auto;
+
+    text-align: center;
+}
+.bigLogo div{
+    position: relative;
+    left: -6px;
+    top: 100px;
+}
+.bigLogo a{
+    display: inline-block;
+    width: 90px;
+    height: 16px;
+    line-height: 16px;
+    font-weight: bold;
+    padding: 10px 30px;
+    margin: 0px 10px;
+    text-align: center;
+    color: white;
+    border-radius: 4px;
+}
+.bigLogo a:first-child{
+    background-color: #00a5e2;
+}
+.bigLogo a:last-child{
+    background-color: #ff9c00;
+}
+
+
+
+/* news */
+
+.news{
+    /* margin-top: 110vh; */
+    /* flex-direction: column; */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.news div:first-child{
+    font-size: 48px;
+    margin-bottom: 30px;
+}
+
+.newsBoxs{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.newsBoxs a:nth-of-type(1){
+    background-image: url('https://overwatch.nosdn.127.net/a/images/2020/10/14/bdc9c0c2ef85a49bbd46ebf2a5db647d.jpg');
+    margin-right: 30px;
+}
+.newsBoxs a:nth-of-type(2){
+    background-image: url('https://overwatch.nosdn.127.net/a/images/2019/6/5/f6782bb64acd59536c15d6adf9463d67.jpg');
+    margin-right: 30px;
+}
+.newsBoxs a:nth-of-type(3){
+    background-image: url('https://overwatch.nosdn.127.net/a/images/2020/5/19/08ce03644e416d6185bfaefe92e4bb1c.jpg');
+}
+.newsBoxs a{
+    display: inline-block;
+    width: 370px;
+    height: 200px;
+    overflow: hidden;
+
+    background-size: auto 100%;
+    background-position: center;
+}
+.newsBoxs a:nth-child(1)::after{
+    content: '万圣夜惊魂2020现已上线';
+    display: block;
+    height: 50px;
+    width: 100%;
+    color: #f0edf2;
+    position: relative;
+    font-weight: bold;
+    font-size: 18px;
+    top:150px;
+    text-align: left;
+    line-height: 50px;
+    padding: 0px 20px;
+    background-color: rgba(0,0,0,.75);
+}
+.newsBoxs a:nth-child(2)::after{
+    content: '回放系统 现已推出';
+    display: block;
+    height: 50px;
+    width: 100%;
+    color: #f0edf2;
+    position: relative;
+    font-weight: bold;
+    font-size: 20px;
+    top:150px;
+    text-align: left;
+    line-height: 50px;
+    padding: 0px 20px;
+    background-color: rgba(0,0,0,.75);
+}
+.newsBoxs a:nth-child(3)::after{
+    content: '《守望先锋》5折特惠并支持花呗分期';
+    display: block;
+    height: 50px;
+    width: 100%;
+    color: #f0edf2;
+    position: relative;
+    font-size: 20px;
+    font-weight: bold;
+    top:150px;
+    text-align: left;
+    line-height: 50px;
+    padding: 0px 20px;
+    background-color: rgba(0,0,0,.75);
+}
+/* .newsBoxs a img{
+    display: block;
+    height: 100%;
+    width: auto;
+} */
+.news_a{
+    display: block;
+    margin: 0 auto;
+    width: 290px;
+    height: 40px;
+    background-color: #00a5e2;
+    color: white;
+    font-size: 20px;
+    line-height: 40px;
+    font-weight: bold;
+    border-radius: 2px;
+}
+.news_a:hover{
+    background-color: #0cbdff;
+}
+
+
+
+
+
+/* Halloween */
+.Halloween{
+    display: flex;
+}
+.Halloween .Halloween_img{
+    width: 1500px;
+    height: 500px;
+    background-image: url('https://blz.nosdn.127.net/1/tm/overwatch/events/2020halloween/Halloween20-HomeBanner-Desktop.jpg');  
+    background-position: -430px 0px;
+}
+
+.Halloween .Halloween_news{
+    margin: auto 0;
+    position: relative;
+    left: -100px;
+}
+.Halloween .Halloween_news span{
+    font-size: 50px;
+    font-style: oblique;
+    color: rgb(84, 88, 99);
+}
+.Halloween .Halloween_news .Halloween_p1{
+    margin-top: 0px;
+    margin-bottom: 12px;
+    color: #008384;
+    font-size: 28px;
+}
+.Halloween .Halloween_news .Halloween_p2{
+    width: 576px;
+    font-size: 18px;
+}
+.Halloween .Halloween_news a{
+    display: block;
+    width: 80px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #ff9c00;
+    color: white;
+    margin-top: 30px;
+    padding:10px 30px;   
+    border-radius: 2px;
+}
+.Halloween .Halloween_news a:hover{
+    background-color: #ffb033;
+}
+
+
+
+/* hero介绍 */
+.hero{
+    width: 100%;
+    height: 1000px;
+
+    background-image: url('https://overwatch.nosdn.127.net/1/assets/img/pages/home/candy.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    padding: 100px 0;
+}
+.hero div:nth-of-type(1){
+    font-style: oblique;
+    font-size: 55px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.hero div:nth-of-type(2){
+    font-size: 24px;
+    
+    text-align: center;    
+}
+.hero div:nth-of-type(3){
+    width: 100%;
+    height: 200px;
+    background-image: linear-gradient(90deg,rgba(42,55,81,0) 0,rgba(42,55,81,.8) 20%,rgba(42,55,81,.8) 80%,rgba(42,55,81,0));
+}
+
+
+
+
+
+
+
+
+/* 开始守望 */
+.watching{
+    width: 100%;
+    height: 280px;
+
+    /*另一种让背景图片铺满div的方式*/
+    background-image: url('https://overwatch.nosdn.127.net/1/assets/img/pages/home/purchase-section-bg.jpg');
+    background-size: cover;
+    background-position: 50%;
+
+    text-align: center;
+
+    /* padding-bottom: 70px; */
+}
+
+.watching .watching_detail{
+    position: relative;
+    top: 50px;
+    z-index: 5;
+}
+
+.watching .watching_detail div:first-child{
+    font-style: oblique;
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.watching .watching_detail div:last-of-type{
+    font-size: 24px;
+}
+
+.watching .watching_detail a{
+    width: 80px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #ff9c00;
+    color: white;
+    margin-top: 30px;
+    padding:5px 40px;   
+    border-radius: 2px;
+
+    position: relative;
+    top: 30px;
+}
+.watching .watching_detail a:hover{
+    background-color: #ffb033;
+}
+
+
+.LastView{
+    width: 100%;
+    height: 200px;
+    
+    background-color: black;
+
+    text-align: center;
+    padding-top: 150px;
+
+    position: relative;
+}
+.LastView .LastViewimg{
+    position: absolute;
+    right: 0px;
+    width: 680px;
+    height: 370px;
+    top: -370px;
+    background-image: url('https://overwatch.nosdn.127.net/1/assets/img/pages/home/brigitte-shoulder-flail.png');
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+}
+.LastView .tel{
+    display: inline-block;
+    font-size: 60px;
+    color: lightblue;
+}

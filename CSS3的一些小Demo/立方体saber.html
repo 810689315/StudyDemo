@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            perspective: 1000px;
+            background: black;
+        }
+
+        :root {
+            --Angle: 0deg;
+        }
+
+        .box {
+            width: 300px;
+            height: 300px;
+            margin: 200px auto;
+            text-align: center;
+            line-height: 300px;
+            transform-style: preserve-3d;
+            position: relative;
+            transform: rotate3d(1, 1, 1,60deg);
+            /* transform: rotate3d(135deg, 90deg, 0deg); */
+
+            transition: all .8s linear;
+        }
+
+        /* .box:hover {
+            transform: rotateY(180deg);
+        } */
+
+        .box div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .box div img {
+            width: 100%;
+            transform: translateY(-15%);
+        }
+
+        .box1 {
+            background-color: red;
+            transform: translateZ(150px);
+        }
+
+        .box2 {
+            transform: translateZ(-150px) rotateY(180deg);
+            background-color: lightcoral;
+        }
+
+        .box3 {
+            background-color: blue;
+            transform: translateX(-150px) rotateY(-90deg);
+        }
+
+        .box4 {
+            background-color: lightblue;
+            transform: translateX(150px) rotateY(90deg);
+        }
+
+        .box5 {
+            background-color: green;
+            transform: translateY(150px) rotateX(-90deg);
+        }
+
+        .box6 {
+            background-color: lightgreen;
+            transform: translateY(-150px) rotateX(90deg);
+        }
+
+        .rotateTo0 {
+            transform: rotateY(var(--Angle));
+        }
+
+        .rotateTo1 {
+            transform: rotateX(var(--Angle));
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box .rotateTo0">
+        <div class="box1"><img src="./img/428px-阿尔托莉雅-卡面y.png" alt=""></div>
+        <div class="box2"><img src="./img/428px-谜之女主角X（Alter）愚人节.png" alt=""></div>
+        <div class="box3"><img src="./img/428px-谜之女主角XX愚人节卡面.png" alt=""></div>
+        <div class="box4"><img src="./img/428px-阿尔托莉雅Archer愚人节.png" alt=""></div>
+        <div class="box5"><img src="./img/428px-阿尔托莉雅·潘德拉贡(Lancer)-卡面愚人节.png" alt=""></div>
+        <div class="box6"><img src="./img/428px-阿尔托莉雅·潘德拉贡(Ruler)愚人节卡面.png" alt=""></div>
+    </div>
+    <script>
+        var box = document.querySelector('.box');
+        var CA = ['rotateTo0', 'rotateTo1']
+        setInterval(function () {
+            box.style.setProperty('--Angle', `${rand(0, 6) * 90 * ((-1) ** rand(1, 5))}deg`);
+            var index = rand(0, 2);
+            box.classList.replace(`${box.classList[1]}`, `${CA[index]}`);
+        }, 1000);
+        function rand(min, max) {
+            return Math.floor(Math.random(min, max) * (max - min) + min);
+        }
+    </script>
+</body>
+
+</html>

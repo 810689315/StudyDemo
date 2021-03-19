@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --percentage: 0%;
+        }
+
+        body {
+            background-color: black;
+            margin: 0px;
+            height: 300vh;
+            /* display: flex; */
+            /* justify-content: center; */
+            /* align-items和min-height 连起来用可以垂直居中 */
+            /* align-items: center; */
+        }
+
+        .sticky {
+            /* sticky粘性定位 */
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            margin: 0px;
+            padding: 0px;
+            font-size: 48px;
+            /* color: white; */
+            letter-spacing: -0.3px;
+            background-image: linear-gradient(135deg, rgba(255, 255, 255, 1)0%, rgba(255, 255, 255, 1)33.33%, rgba(255, 255, 255, 0)66.67%, rgba(255, 255, 255, 0)100%);
+            background-size: 300% 100%;
+            background-position-x: calc(100% - var(--percentage));
+
+            background-clip: text;
+            -webkit-background-clip: text;
+
+            color: transparent;
+
+            /* transition: background-position-x 2s ease-in-out; */
+
+        }
+
+        /* h1:hover {
+            background-position-x: 0%;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="sticky">
+        <h1>
+            I come,I see,I conquer.
+        </h1>
+    </div>
+    <script>
+        const h1 = document.querySelector('h1');
+
+        document.addEventListener("scroll", (e) => {
+            var html = document.documentElement
+            //因为滚动被隐藏的高度/（html整个的高度-可视窗口高度）
+            let scrolled = html.scrollTop / (html.scrollHeight - html.clientHeight);
+            console.log(scrolled);
+            h1.style.setProperty('--percentage', `${scrolled * 100}%`);
+        })
+    </script>
+</body>
+
+</html>
